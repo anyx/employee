@@ -1,0 +1,26 @@
+<form>
+    <div class="form-group">
+        <label>Логин</label>
+        <input class="form-control" ng-readonly="user.id" name="login" ng-model="user.login">
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input class="form-control" name="email" ng-model="user.email">
+    </div>
+    <div class="form-group">
+        <label>Имя</label>
+        <input class="form-control" name="firstName" ng-model="user.firstName">
+    </div>
+    <div class="form-group">
+        <label>Фамилия</label>
+        <input class="form-control" name="lastName" ng-model="user.lastName">
+    </div>
+    <div class="form-group">
+        <label>Пароль</label>
+        <input class="form-control" name="password" type="password" ng-model="user.password">
+    </div>
+
+    <div class="role-form">
+        <button ng-click="save(user)" class="btn btn-primary">Сохранить</button>
+    </div>
+</form>

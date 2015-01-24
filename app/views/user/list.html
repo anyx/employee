@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-md-2 pull-right">
+        <a ui-sref="admin.user.create" class="btn btn-info">Добавить</a>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Логин</th>
+            <th>Email</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Действия</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="user in users">
+            <td>{{user.id}}</td>
+            <td>{{user.login}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>
+                <a ui-sref="admin.user.edit({id: user.id})" class="btn btn-sm btn-info" title="Редактировать">
+                    <i class="fa fa-pencil-square-o"></i>
+                </a>
+                <button class="btn btn-sm btn-danger" title="Удалить" ng-click="remove(user)">
+                    <i class="fa fa-remove"></i>
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
