@@ -20,8 +20,8 @@
     <div class="form-group">
         <label>Прикрепленные файлы</label>
 
-        <ul ng-repeat="file in material.files" ng-if="material.files.length > 0">
-            <li>{{file.name}}</li>
+        <ul class="list-unstyled" ng-repeat="file in material.files" ng-if="material.files.length > 0">
+            <li> <i class="fa fa-file-image-o"></i> {{file.name}}</li>
         </ul>
 
         <p class="bg-warning" style="padding: 10px;" ng-if="material.files.length <= 0">

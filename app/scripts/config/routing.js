@@ -8,7 +8,7 @@ angular.module('app')
             requireBase: false
         });
 
-        //$urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/');
 
         $stateProvider
             .state('admin', {
@@ -34,15 +34,19 @@ angular.module('app')
                 data: {
                     title: 'Управление материалами для сотрудников'
                 }
-            });
+            })
+            .state('admin.reset', {
+                url: '/reset',
+                controller: 'ResetCtrl'
+            })
     })
     .run(function($rootScope, $state) {
         $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {
             console.log('on');
-                console.error('State change error', error);
-                event.preventDefault();
-                //$state.go('public.500', {}, {location: false});
-            });
+            console.error('State change error', error);
+            event.preventDefault();
+            //$state.go('public.500', {}, {location: false});
+        });
 
         $rootScope.$on('$stateChangeSuccess', function(event, toState) {
             if (_.isObject(toState.data)) {

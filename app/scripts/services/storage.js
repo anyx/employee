@@ -10,7 +10,7 @@ app.service('storage', function($window) {
 
             try {
                 data = JSON.parse(data);
-            } catch(e) {
+            } catch (e) {
 
             }
 
@@ -19,6 +19,9 @@ app.service('storage', function($window) {
 
         set: function(name, data) {
             localStorage.setItem(name, JSON.stringify(data));
+        },
+        remove: function(name) {
+            localStorage.removeItem(name);
         }
     }
 

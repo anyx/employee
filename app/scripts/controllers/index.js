@@ -5,7 +5,8 @@ app
         $scope.users = users.getAll();
         $scope.materials = materials.getAll();
     })
-    .controller('ResetCtrl', function($scope, $state) {
-        $state.go()
+    .controller('ResetCtrl', function($scope, $state, $window, mocksLoader) {
+        mocksLoader.load(true);
+        $window.location = '/';
     });
 
