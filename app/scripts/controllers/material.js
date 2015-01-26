@@ -13,6 +13,11 @@ app
         };
     })
     .controller('MaterialEditCtrl', function($scope, $state, FileUploader, materials, material) {
+
+        $scope.formatSize = function(size) {
+            return Math.round(size / (1024 * 1024) * 100) / 100;
+        };
+
         $scope.material = material;
         if (!_.isArray(material.files)) {
             material.files = [];

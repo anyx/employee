@@ -25,8 +25,16 @@
     <div class="form-group">
         <label>Прикрепленные файлы</label>
 
-        <ul class="list-unstyled" ng-repeat="file in material.files" ng-if="material.files.length > 0">
-            <li> <i class="fa fa-file-image-o"></i> {{file.name}}</li>
+        <ul class="list-unstyled b-files-list clearfix" ng-repeat="file in material.files" ng-if="material.files.length > 0">
+            <li class="b-files-list__item">
+                <div class="b-files-list__item-image">
+                    <i class="fa fa-file-image-o"></i>
+                </div>
+                <div class="b-files-list__item-text">
+                    {{file.name}}
+                    <div class="text-muted" ng-if="file.size">{{formatSize(file.size)}} MB</div>
+                </div>
+            </li>
         </ul>
 
         <p class="bg-warning" style="padding: 10px;" ng-if="material.files.length <= 0">
