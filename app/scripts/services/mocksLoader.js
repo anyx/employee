@@ -5,14 +5,16 @@ app.service('mocksLoader', function(storage) {
 
     var userData = [
         {
-            id: '1',
+            id: _.uniqueId(),
             login: 'alex',
+            email: 'some@mail.com',
             firstName: 'Александр',
             lastName: 'Иванов'
         },
         {
-            id: '2',
+            id: _.uniqueId(),
             login: 'ivan',
+            email: 'ivan@mail.com',
             firstName: 'Иван',
             lastName: 'Николаев'
         }
@@ -20,7 +22,7 @@ app.service('mocksLoader', function(storage) {
 
     var materialData = [
         {
-            id: '1',
+            id: _.uniqueId(),
             title: 'Добро пожаловать в свободный мир!',
             text: 'Итак, вы уволены. Что делать?',
             published: true,
@@ -32,7 +34,7 @@ app.service('mocksLoader', function(storage) {
             ]
         },
         {
-            id: '2',
+            id: _.uniqueId(),
             title: '10 рецептов глазуньи',
             text: 'Побалуем себя свежими рецептами',
             published: false,
