@@ -42,7 +42,8 @@ app.service('mocksLoader', function(storage) {
             createdAt: new Date(),
             files: [
                 {
-                    name: 'asd.jpg'
+                    name: 'asd.jpg',
+                    size: 390852
                 }
             ]
         }
