@@ -5,7 +5,12 @@
     </div>
     <div class="form-group">
         <label>Текст</label>
-        <text-angular ng-model="material.text"></text-angular>
+        <text-angular
+            ng-model="material.text"
+            ta-toolbar="[['h1','h2','h3', 'h4', 'h5', 'h6', 'p', 'pre', 'quote'],
+            ['bold','italics', 'underline', 'ul', 'ol', 'undo', 'redo', 'clear'],
+            ['justifyLeft', 'justifyCenter', 'justifyRight', 'indent', 'outdent', 'html', 'insertImage', 'insertLink', 'insertVideo']]"
+            ></text-angular>
     </div>
 
     <div class="form-group">
